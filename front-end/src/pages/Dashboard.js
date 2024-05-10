@@ -2,21 +2,21 @@ import axios from "axios";
 import DashboardCompoent from "./components/DashboardComponent";
 //CRUD
 const getStudents = async () => {
-    const { data } = await axios.get("http://student-record-backend-ax136mnol-imansohail29s-projects.vercel.app/api/students")
+    const { data } = await axios.get("https://student-record-client.vercel.app/api/students")
     return data
 }
 const newStudent = async (students) => {
-    const { data } = await axios.post("http://student-record-backend-ax136mnol-imansohail29s-projects.vercel.app/api/students", students)
+    const { data } = await axios.post("https://student-record-client.vercel.app/api/students", students)
     return data
 }
 const deleteStudent = async (id) => {
     console.log(id)
-    const { data } = await axios.delete(`http://student-record-backend-ax136mnol-imansohail29s-projects.vercel.app/api/students/${id}`)
+    const { data } = await axios.delete(`https://student-record-client.vercel.app/api/students/${id}`)
     return data
 }
 const updateStudent = async (id,newData) => {
     console.log("id+newData:  "+id+JSON.stringify(newData))
-    const { data } = await axios.put(`http://student-record-backend-ax136mnol-imansohail29s-projects.vercel.app/api/students/${id}`, { ...newData })
+    const { data } = await axios.put(`https://student-record-client.vercel.app/api/students/${id}`, { ...newData })
     return data
 }
 const Dashboard = () => {
