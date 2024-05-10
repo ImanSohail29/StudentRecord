@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse'; // A library to parse CSV data
+import { Button, Col, Row } from 'react-bootstrap';
 
 const ImportCSV = ({ onImport }) => {
   const [file, setFile] = useState(null);
@@ -25,10 +26,13 @@ const ImportCSV = ({ onImport }) => {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleImport}>Import CSV</button>
-    </div>
+    <Row className='m-5'>
+      <Col md={4}>  <input class="form-control form-control-lg" id="formFileLg" type="file" onChange={handleFileChange} />
+      </Col>
+      <Col md={2}>      <Button variant='success' onClick={handleImport}>Import CSV</Button>
+      </Col>
+
+    </Row>
   );
 };
 

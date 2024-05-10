@@ -40,7 +40,6 @@ const StudentTable = ({ students, editingStudentId, onDelete, onEdit, onSaveEdit
     <Container>
       <Row>
         <Col>
-        <Button onClick={handleExportToPDF}>Export to PDF</Button>
           <Table bordered striped responsive ref={tableRef}>
             <thead>
               <tr>
@@ -48,7 +47,8 @@ const StudentTable = ({ students, editingStudentId, onDelete, onEdit, onSaveEdit
                 <th>Name</th>
                 <th>Age</th>
                 <th>Grade</th>
-                <th>Action</th>
+                <th>Action        <Button onClick={handleExportToPDF}>Export to PDF</Button>
+</th>
               </tr>
             </thead>
             <tbody>
