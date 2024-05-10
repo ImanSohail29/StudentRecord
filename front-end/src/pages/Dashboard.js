@@ -1,6 +1,6 @@
 import axios from "axios";
 import DashboardCompoent from "./components/DashboardComponent";
-
+//CRUD
 const getStudents = async () => {
     const { data } = await axios.get("/api/students")
     return data
