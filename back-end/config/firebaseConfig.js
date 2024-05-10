@@ -1,6 +1,6 @@
 require('dotenv').config();
 const firebase = require('firebase-admin');
-const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS
+const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS)
 // Initialize Firebase
 if (!firebase.apps.length) {
   // Initialize Firebase Admin SDK
