@@ -3,11 +3,6 @@ const {createServer}=require("http")
 const cors=require('cors')
 
 const app = express();
-app.use(cors({
-    origin:["https://student-record-client-hhz2bot8r-imansohail29s-projects.vercel.app"],
-    methods:["POST","GET","PUT","DELETE"],
-    credentials:false
-}))
 app.use(express.json())
 
 const port = 5000
